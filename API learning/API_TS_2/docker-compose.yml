@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:15
+    container_name: tec_stu_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: danish
+      POSTGRES_DB: tec_stu
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
+    # Remove or comment this line:
+    # ports:
+    #   - "5432:5432"
